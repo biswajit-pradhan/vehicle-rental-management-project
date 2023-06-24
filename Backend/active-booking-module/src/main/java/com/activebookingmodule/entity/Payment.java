@@ -1,4 +1,4 @@
-package com.paymentmodule.entity;
+package com.activebookingmodule.entity;
 
 import java.time.LocalDate;
 

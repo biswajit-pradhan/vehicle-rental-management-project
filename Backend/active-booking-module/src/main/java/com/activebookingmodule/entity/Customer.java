@@ -1,5 +1,4 @@
-package com.paymentmodule.entity;
-
+package com.activebookingmodule.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -13,7 +12,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
- @Data
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class Customer {
@@ -21,19 +20,19 @@ public class Customer {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "customerId")
 	private Integer customerId;
-	@NotNull(message="first name should't be null")
+	@NotNull(message = "first name should't be null")
 	@Column(name = "firstName")
 	private String firstName;
-	@NotNull(message="last name should't be null")
+	@NotNull(message = "last name should't be null")
 	@Column(name = "lastName")
 	private String lastName;
-	@NotNull(message="Email id should't be null")
+	@NotNull(message = "Email id should't be null")
 	@Column(name = "emailId")
 	private String emailId;
-	@NotNull(message="phone number should't be null")
+	@NotNull(message = "phone number should't be null")
 	@Column(name = "phoneNumber")
 	private String phoneNumber;
-	@NotNull(message="Address should't be null")
+	@NotNull(message = "Address should't be null")
 	@Column(name = "address")
 	private String address;
 
