@@ -1,35 +1,35 @@
 eureka:
-  instance:
-    hostname: localhost
+   instance:
+      hostname: localhost
 server:
-  port: '9000'
+   port: '9000'
 spring:
-  application:
-    name: api-gateway
-  cloud:
-    gateway:
-      routes:
-      - id: admin-module
-        uri: lb://admin-module
-        predicates:
-        - Path=/api/admin/**
-      - id: customer-module
-        uri: lb://customer-module
-        predicates:
-        - Path=/api/customer/**
-      - id: vehicle-module
-        uri: lb://vehicle-module
-        predicates:
-        - Path=/api/vehicle/**
-      - id: payment-module
-        uri: lb://payment-module
-        predicates:
-        - Path=/api/payment/**
-      - id: booking-module
-        uri: lb://booking-module
-        predicates:
-        - Path=/api/booking/**
-      - id: active-booking-module
-        uri: lb://active-booking-module
-        predicates:
-        - Path=/api/active-booking/**
+   application:
+      name: api-gateway
+   cloud:
+      gateway:
+         routes:
+         -  id: admin-module
+            uri: lb://admin-module
+            predicates:
+            - Path=/api/admin/**
+         -  id: customer-module
+            uri: lb://customer-module
+            predicates:
+            - Path=/api/customer/**
+         -  id: vehicle-module
+            uri: lb://vehicle-module
+            predicates:
+            - Path=/api/vehicle/**
+         -  id: payment-module
+            uri: lb://payment-module
+            predicates:
+            - Path=/api/payment/**
+         -  id: booking-module
+            uri: lb://booking-module
+            predicates:
+            - Path=/api/booking/**
+         -  id: active-booking-module
+            uri: lb://active-booking-module
+            predicates:
+            - Path=/api/active-booking/**
