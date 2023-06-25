@@ -30,7 +30,7 @@
 		</encoder>
 	</appender>
 
-	<logger name="com.adminservice" level="trace" additivity="false">
+	<logger name="com.vehiclemodule" level="trace" additivity="false">
 		<appender-ref ref="CONSOLE" />
 		<!--<appender-ref ref="FILE-ROLLING" />-->
 	</logger>

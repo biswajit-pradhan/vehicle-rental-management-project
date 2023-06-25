@@ -1,4 +1,4 @@
-package com.activebookingmodule.entity;
+package com.adminmodule.entity;
 
 import java.time.LocalDate;
 
@@ -16,17 +16,19 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Payment {
+public class Booking {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int paymentId;
-
-	private String paymentMode;
-	
-	private LocalDate paymentDate;
+	private int bookingId;
 	@OneToOne
-	private Booking booking;
-	private String paymentStatus;
- 
+	private Customer customer;
+	@OneToOne
+	private Vehicle vehicle;
+	private LocalDate bookingDate;
+	private LocalDate bookedTillDate;
+	private String bookingDescription;
+	private double totalCost;
+	private double distance;
+
 }

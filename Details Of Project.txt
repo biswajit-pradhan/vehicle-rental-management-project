@@ -5,7 +5,10 @@ customer-module=9002 ("/api/customer")
 vehicle-module=9003 ("/api/vehicle")
 payment-module=9004 ("/api/payment")
 booking-module=9005 ("/api/booking")
-active-booking-module=9006 ("/api/active-booking")
 
 
 These are your port numbers and @RequestMapping details.
+
+
+1.Administrator can add/modify the vehicle details,view vehicles, view 
+customers,view booking requests, view details of vehicles rented and payment details.

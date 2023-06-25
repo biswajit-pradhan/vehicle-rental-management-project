@@ -81,8 +81,7 @@ public class BookingServiceImpl {
 		bookingRepository.save(bookingData);
 		
 	}
-	
-	@GetMapping("/viewallbookingbycustomerid/{customerId}")
+
 	public List<Booking> viewAllBookingByCustomerId(int customerId){
 		List<Booking> booking= bookingRepository.findAll()
 				.stream().filter(b->b.getCustomer().getCustomerId()==customerId)
@@ -95,7 +94,6 @@ public class BookingServiceImpl {
 		return booking;
 	}
 	
-	@GetMapping("/viewallbookingbydate")
 	public List<Booking> viewAllBookingByDate(LocalDate date){
 
 		List<Booking> booking=bookingRepository.findAll()

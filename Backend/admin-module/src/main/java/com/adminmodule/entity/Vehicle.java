@@ -1,4 +1,4 @@
-package com.activebookingmodule.entity;
+package com.adminmodule.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
