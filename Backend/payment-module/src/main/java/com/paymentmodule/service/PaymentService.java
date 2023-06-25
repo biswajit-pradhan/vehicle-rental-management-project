@@ -13,7 +13,7 @@ import com.paymentmodule.exception.NotFoundException;
 public interface PaymentService  {
 	public Payment addPayment(PaymentDto payment)throws NotFoundException;
 	public Payment cancelPayment(PaymentDto payment)throws NotFoundException;
-	public Payment viewPayment(Payment payment)throws NotFoundException;
+	public Payment viewPayment(int BookingId)throws NotFoundException;
 	public List<Payment> viewAllPayment();
 	public double calculateMonthlyRevenue(LocalDate d1,LocalDate d2);
 	public Double calculateTotalPayment(int vehicleId);

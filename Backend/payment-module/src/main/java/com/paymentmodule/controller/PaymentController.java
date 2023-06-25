@@ -42,8 +42,8 @@ public class PaymentController {
 	}
 
 	@GetMapping("/viewpayment")
-	public ResponseEntity<Payment> viewPayment(@RequestBody Payment payment) throws NotFoundException {
-		Payment payment1 = paymentServiceImpl.viewPayment(payment);
+	public ResponseEntity<Payment> viewPayment(@RequestParam int bookingId) throws NotFoundException {
+		Payment payment1 = paymentServiceImpl.viewPayment(bookingId);
 		return new ResponseEntity<>(payment1, HttpStatus.OK);
 	}
 

@@ -70,11 +70,11 @@ public class PaymentServiceImpl implements PaymentService {
 	}
 
 	@Override
-	public Payment viewPayment(Payment payment) throws NotFoundException {
+	public Payment viewPayment(int bookingId) throws NotFoundException {
 		// TODO Auto-generated method stub
-		Optional<Payment> payment1 = paymentRepo.findById(payment.getPaymentId());
-		if (payment1.isPresent()) {
-			return paymentRepo.findById(payment.getPaymentId()).get();
+		Optional<Payment> payment = paymentRepo.findById(bookingId);
+		if (payment.isPresent()) {
+			return payment.get();
 		} else {
 			throw new NotFoundException("Booking not found");
 		}
