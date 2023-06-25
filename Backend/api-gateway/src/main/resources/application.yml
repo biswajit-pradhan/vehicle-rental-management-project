@@ -29,7 +29,3 @@ spring:
             uri: lb://booking-module
             predicates:
             - Path=/api/booking/**
-         -  id: active-booking-module
-            uri: lb://active-booking-module
-            predicates:
-            - Path=/api/active-booking/**
