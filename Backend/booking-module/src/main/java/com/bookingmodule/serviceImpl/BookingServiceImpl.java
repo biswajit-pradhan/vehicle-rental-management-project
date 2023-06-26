@@ -6,8 +6,6 @@ import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 
 import com.bookingmodule.entity.Booking;
 import com.bookingmodule.exception.NoBookingsFoundException;
@@ -15,9 +13,10 @@ import com.bookingmodule.repository.BookingRepository;
 import com.bookingmodule.repository.CustomerRepository;
 import com.bookingmodule.repository.DriverRepository;
 import com.bookingmodule.repository.VehicleRepository;
+import com.bookingmodule.service.BookingService;
 
 @Service
-public class BookingServiceImpl {
+public class BookingServiceImpl implements BookingService {
 
 	@Autowired
 	private BookingRepository bookingRepository;
@@ -52,7 +51,7 @@ public class BookingServiceImpl {
 		bookingRepository.save(booking);
 	}
 	
-	public void deleteBookingById(@PathVariable int bookingId){
+	public void deleteBookingById(int bookingId){
 		if(!bookingRepository.findById(bookingId).isPresent()) {
 			throw new NoBookingsFoundException("No Booking Found for Booking Id "+bookingId);
 		}
