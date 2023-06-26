@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.customermodule.exception.BusinessException;
@@ -20,15 +21,8 @@ import com.customermodule.exception.ControllerException;
 import com.customermodule.model.Customer;
 import com.customermodule.serviceImpl.CustomerServiceImpl;
 
-
-
-
-
-
-
-
-
 @RestController
+@RequestMapping("/api/customer")
 public class CustomerController {
 	
 	@Autowired

@@ -80,8 +80,7 @@ public class BookingServiceImpl implements BookingService {
 		bookingRepository.save(bookingData);
 		
 	}
-	
-	
+
 	public List<Booking> viewAllBookingByCustomerId(int customerId){
 		List<Booking> booking= bookingRepository.findAll()
 				.stream().filter(b->b.getCustomer().getCustomerId()==customerId)
